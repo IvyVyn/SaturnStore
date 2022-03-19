@@ -3,16 +3,34 @@ package com.example.saturnstore.entity.order;
 import com.example.saturnstore.entity.product.Product;
 import com.example.saturnstore.entity.shop.Shop;
 import com.example.saturnstore.entity.user.UserAccount;
+import lombok.*;
 
+import javax.persistence.*;
 import java.time.Instant;
 import java.util.ArrayList;
 
-public class Order {
+@NoArgsConstructor
+@Getter
+@Setter
+@RequiredArgsConstructor
+@AllArgsConstructor
 
+@Entity
+public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @ManyToOne
     private UserAccount customer;
+
+    @ManyToOne
     private Shop seller;
-    private ArrayList<Product> bucket;
+
+    @OneToMany
+    private ArrayList<Product> products;
+
+    @Enumerated(EnumType.STRING)
     private OrderState state;
     private Instant lastChangeTime;
 
