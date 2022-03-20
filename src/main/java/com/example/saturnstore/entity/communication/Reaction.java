@@ -9,8 +9,6 @@ import java.time.Instant;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 public class Reaction {

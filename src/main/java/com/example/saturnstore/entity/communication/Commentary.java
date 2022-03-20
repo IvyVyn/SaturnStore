@@ -13,8 +13,6 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 @DiscriminatorColumn(name = "COMMENTARY_TYPE")

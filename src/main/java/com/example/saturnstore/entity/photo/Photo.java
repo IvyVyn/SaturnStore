@@ -4,11 +4,9 @@ import lombok.*;
 
 import javax.persistence.*;
 
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 @Table(name = "PHOTO")

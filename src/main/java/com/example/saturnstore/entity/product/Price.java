@@ -1,8 +1,16 @@
 package com.example.saturnstore.entity.product;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
+
+@NoArgsConstructor
+@Getter
+@Setter
 
 @Entity
 @Table(name = "PRICE")

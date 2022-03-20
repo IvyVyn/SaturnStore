@@ -9,8 +9,6 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 @DiscriminatorColumn(name = "COMMENTARY_CLAIM")

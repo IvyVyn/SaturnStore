@@ -9,8 +9,6 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 @DiscriminatorValue("REVIEW")

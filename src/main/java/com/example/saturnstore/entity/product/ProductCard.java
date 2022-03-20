@@ -15,8 +15,6 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 public class ProductCard implements Subscriptable {

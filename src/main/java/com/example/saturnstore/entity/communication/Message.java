@@ -11,8 +11,6 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 public class Message {

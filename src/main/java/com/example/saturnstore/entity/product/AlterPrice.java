@@ -10,8 +10,6 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 @DiscriminatorValue("ALTER_PRICE")

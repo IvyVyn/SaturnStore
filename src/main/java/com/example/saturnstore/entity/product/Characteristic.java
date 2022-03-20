@@ -7,8 +7,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 public class Characteristic {

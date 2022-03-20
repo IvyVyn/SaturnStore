@@ -8,8 +8,6 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@AllArgsConstructor
 
 @Entity
 public class ProductTemplate {
