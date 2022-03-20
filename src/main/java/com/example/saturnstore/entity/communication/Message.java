@@ -7,6 +7,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -30,7 +31,7 @@ public class Message {
     private Instant readTime;
 
     @OneToMany
-    private ArrayList<Photo> photos;
+    private List<Photo> photos;
 
     @ManyToOne
     private Dialog dialog;

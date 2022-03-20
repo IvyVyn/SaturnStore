@@ -8,6 +8,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -27,7 +28,7 @@ public class Order {
     private Shop seller;
 
     @OneToMany
-    private ArrayList<Product> products;
+    private List<Product> products;
 
     @Enumerated(EnumType.STRING)
     private OrderState state;
