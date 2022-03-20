@@ -18,6 +18,7 @@ public class Dialog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
     private long id;
     private String name;
 

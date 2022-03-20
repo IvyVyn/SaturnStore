@@ -20,11 +20,20 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private long id;
+
+    @Column(nullable = false)
     private String serialNumber;
+
+    @OneToOne
     private Price price;
-    private ProductStatus productStatus;
+
+    @OneToOne
     private ProductCard productCard;
+
+    @ManyToOne
     private Warehouse warehouse;
+
+    @OneToMany
     private Set<Order> orders;
 
 }

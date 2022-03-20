@@ -2,10 +2,7 @@ package com.example.saturnstore.entity.photo;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -14,12 +11,18 @@ import javax.persistence.Table;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "photo")
-public class Photo {
+@Table(name = "PHOTO")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING,
+        name = "PHOTO_TYPE")
+public abstract class Photo {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
     private Long id;
 
-    @Column(name = "order")
+    @Column(name = "ORDER")
     private int order;
 
     private String name;

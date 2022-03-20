@@ -1,10 +1,13 @@
 package com.example.saturnstore.entity.communication;
 
+import com.example.saturnstore.entity.photo.CommentaryPhoto;
 import com.example.saturnstore.entity.product.Product;
 import com.example.saturnstore.entity.user.UserAccount;
 import lombok.*;
+
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.List;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -24,6 +27,7 @@ public abstract class Commentary {
     @ManyToOne
     @JoinColumn(updatable = false)
     private UserAccount author;
+
     private String content;
     private Instant creationTime;
     private boolean isDeleted;
@@ -39,5 +43,8 @@ public abstract class Commentary {
 
     @OneToMany
     private Set<Answer> answers;
+
+    @OneToMany
+    private List<CommentaryPhoto> photos;
 
 }

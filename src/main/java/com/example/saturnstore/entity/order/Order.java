@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
     private long id;
 
     @ManyToOne
@@ -32,6 +33,7 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     private OrderState state;
+
     private Instant lastChangeTime;
 
 }

@@ -7,7 +7,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -20,6 +19,7 @@ public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
     private long id;
 
     @ManyToOne
@@ -31,9 +31,9 @@ public class Message {
 
     private Instant readTime;
 
-    @ManyToOne
-    @OrderBy("photo.order ASC")
+    @OneToMany
     private ArrayList<Photo> photos;
+
     @ManyToOne
     private Dialog dialog;
 

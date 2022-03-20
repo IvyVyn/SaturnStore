@@ -1,6 +1,6 @@
-package com.example.saturnstore.entity.communication;
+package com.example.saturnstore.entity.photo;
 
-import com.example.saturnstore.entity.user.UserAccount;
+import com.example.saturnstore.entity.communication.Commentary;
 import lombok.*;
 
 import javax.persistence.DiscriminatorValue;
@@ -14,10 +14,10 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 
 @Entity
-@DiscriminatorValue("USER_ACCOUNT_CLAIM")
-public class UserAccountClaim extends Claim {
+@DiscriminatorValue("COMMENTARY_PHOTO")
+public class CommentaryPhoto extends Photo {
 
     @ManyToOne
-    private UserAccount userAccount;
+    private Commentary commentary;
 
 }

@@ -2,6 +2,7 @@ package com.example.saturnstore.entity.communication;
 
 import lombok.*;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
@@ -12,6 +13,7 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 
 @Entity
+@DiscriminatorValue("ANSWER")
 public class Answer extends Commentary {
 
     @ManyToOne

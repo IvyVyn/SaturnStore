@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 
 @Entity
-@DiscriminatorColumn(name = "CLAIM_TYPE")
+@DiscriminatorColumn(name = "COMMENTARY_CLAIM")
 public class CommentaryClaim extends Claim {
 
     @ManyToOne
